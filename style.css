@@ -9,12 +9,10 @@ body {
     color: white;
     min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
 }
 
 .container {
     min-height: 100vh;
-    min-width: 100vh;
 }
 
 header {
@@ -51,9 +49,9 @@ ul li {
     align-items: center;
 }
 
+
 .content .left {
     width: 40%;
-    
 }
 
 .left h1{
@@ -104,8 +102,27 @@ span{
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.14);
     margin: 10px;
+    cursor: pointer;
 }
 
 .encoded{
     background: #EF5DA8;
+}
+
+@media only screen and (max-width: 1024px){
+    .content{
+        display: flex;
+        flex-direction: column;
+      padding: 100px 20px 0px 20px;
+    }
+    .content .left{
+        width: 100%;
+    }
+    .content .right{
+        width: 100%;
+        padding-top: 20px;
+    }
+    nav{
+        padding: 0px 20px;
+    }
 }
