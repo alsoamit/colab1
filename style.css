@@ -9,38 +9,26 @@ body {
     color: white;
     min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
 }
 
 .container {
     min-height: 100vh;
-    min-width: 100vh;
 }
 
 header {
-    height: 70px;
-    /* background: rgba(255, 255, 255, 0.14); */
+    height: 100px;
+    background: rgba(255, 255, 255, 0.14);
     position: relative;
-    /* clip-path: circle(40%); */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
 }
 
 nav {
-    height: 70px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
     /* clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 0% 20%); */
-}
-
-header::after {
-    content : "";
-    background: rgba(255, 255, 255, 0.14);
-    height: 200%;
-    width: 200%;
-    position: absolute;
-    top: -100%;
-    transform: rotate(-2deg);
 }
 
 ul {
@@ -56,20 +44,20 @@ ul li {
 
 .content {
     display: flex;
-    padding:0 100px;
+    padding: 0 100px;
     min-height: 70vh;
     align-items: center;
 }
 
 .content .left {
     width: 40%;
-    
 }
 
-.left h1{
+.left h1 {
     font-size: 60px;
 }
-.light{
+
+.light {
     font-size: 40px;
     font-weight: lighter;
     color: rgba(255, 255, 255, 0.65);
@@ -80,7 +68,7 @@ ul li {
     width: 60%;
 }
 
-.btn{
+.btn {
     height: 40px;
     width: 150px;
     border-radius: 12px;
@@ -96,24 +84,45 @@ ul li {
     width: 200px;
 }
 
-p{
+p {
     margin: 20px 0;
     line-height: 140%;
-    color: rgba(255, 255, 255, 0.65)    ;
+    color: rgba(255, 255, 255, 0.65);
 }
 
-.slider{
+.slider {
     display: flex;
     justify-content: center;
 }
-span{
+
+span {
     display: inline-block;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.14);
     margin: 10px;
+    cursor: pointer;
 }
-.encoded{
+
+.encoded {
     background: #EF5DA8;
+}
+
+@media only screen and (max-width: 1024px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        padding: 100px 20px 0px 20px;
+    }
+    .content .left {
+        width: 100%;
+    }
+    .content .right {
+        width: 100%;
+        padding-top: 20px;
+    }
+    nav {
+        padding: 0px 20px;
+    }
 }
