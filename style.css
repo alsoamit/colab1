@@ -34,6 +34,9 @@ nav {
 ul {
     list-style: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 ul li {
@@ -110,6 +113,91 @@ span{
     background: #EF5DA8;
 }
 
+.hamb{
+    display: flex;
+    flex-direction: column;
+}
+
+.hamb span{
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 2px;
+    border-radius: 0;
+    cursor: pointer;
+  
+}
+
+.open span{
+    margin: 0;
+}
+.open .span1{
+    animation: rotate1 0.5s forwards;
+}
+.open .span3{
+    animation: rotate2 0.5s forwards;
+}
+
+@keyframes rotate1 {
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes rotate2 {
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+.open .span2{
+    display: none;
+}
+
+/* css for overlay */
+.overlay{
+    display:none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+}
+
+.overlay ul{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+}
+
+.overlay ul li{
+    height: 100px;
+    width: 100px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.14);
+    color: rgba(255, 255, 255, 0.85);
+    cursor:pointer;
+}
+
+.overlay ul li:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.overlay ul button {
+    height: 100px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100px;
+}
 @media only screen and (max-width: 1024px){
     .content{
         display: flex;
@@ -125,5 +213,18 @@ span{
     }
     nav{
         padding: 0px 20px;
+    }
+    nav ul{
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1024px){
+    .hamb{
+        display: none;
+    }
+    .overlay{
+        display: none;
     }
 }
